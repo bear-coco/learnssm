@@ -209,6 +209,24 @@
           <encoding>UTF-8</encoding>
         </configuration>
       </plugin>
+
+      <!-- jetty插件 然后在运行的配置中选择maven command line = jetty:run  Ok 即可 -->
+      <plugin>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>9.4.27.v20200227</version>
+        <configuration>
+          <scanIntervalSeconds>10</scanIntervalSeconds>
+          <!-- 设置端口 -->
+          <httpConnector>
+            <port>8080</port>
+          </httpConnector>
+          <!-- 设置项目路径 -->
+          <webAppConfig>
+            <contextPath>/ssm</contextPath>
+          </webAppConfig>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 </project>
