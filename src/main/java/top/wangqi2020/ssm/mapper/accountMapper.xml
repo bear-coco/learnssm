@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.wangqi2020.ssm.dao.AccountDao">
+    <insert id="addAccount">
+        insert into
+            t_account(account_name, account_type, remark, money, user_id)
+        values
+               (#{accountName}, #{accountType}, #{remark}, #{money}, #{userId})
+    </insert>
+    <update id="updateAccount">
+        update
+            t_account
+        set
+            account_name = #{accountNam
+            e},
+            account_type = #{accountType},
+            remark       = #{remark},
+            money        = #{money},
+            user_id      = #{userId}
+        where account_id = #{accountId}
+    </update>
+    <delete id="deleteAccountById" parameterType="int">
+        delete from
+              t_account
+        where
+              account_id = #{accountId}
+    </delete>
+    <select id="queryAccountById" parameterType="int" resultType="top.wangqi2020.ssm.pojo.Account">
+        select account_id   as accountId,
+               account_name as accountName,
+               account_type as accountType,
+               money,
+               remark,
+               create_date  as createDate,
+               update_date  as updateDate,
+               user_id      as userId
+        from t_account
+        where account_id = #{accountId}
+    </select>
+</mapper>
