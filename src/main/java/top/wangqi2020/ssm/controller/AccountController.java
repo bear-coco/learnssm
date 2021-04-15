@@ -89,13 +89,18 @@ public class AccountController {
 
     /**
      * 更新操作
+     * 不可以使用 put  会出现问题   所以使用 patch
+     *      出现的问题
+     *          如果使用put会显示方法不被允许
+     *          因为我们需要传入pojo层的所有字段，才可以使用put，
+     *          所以建议如果更新所有的内容的话，可以使用put，但是如果更新一部分的话建议使用patch
      * @param account 账户信息的JSON格式的字符串
      * @return 返回状态码和状态信息
      */
-    @PutMapping("")
+    @PatchMapping("")
     @ResponseBody
     public Map<String,Object> updateAccount(@RequestBody Account account){
-        Map<String,Object> map = new HashMap<>(2);
+        Map<String,Object> map = new HashMap<>();
         int row = accountService.updateAccount(account);
         if (row > 0){
             map.put("code","200");

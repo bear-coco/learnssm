@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="top.wangqi2020.ssm.dao.AccountDao">
-    <insert id="addAccount">
+    <insert id="addAccount" parameterType="Account">
         insert into
             t_account(account_name, account_type, remark, money, user_id)
         values
@@ -13,8 +13,7 @@
         update
             t_account
         set
-            account_name = #{accountNam
-            e},
+            account_name = #{accountName},
             account_type = #{accountType},
             remark       = #{remark},
             money        = #{money},
