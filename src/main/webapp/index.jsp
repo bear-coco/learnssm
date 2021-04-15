@@ -7,5 +7,6 @@
 </head>
 <body>
 <h2>Hello World!</h2>
+<a href="insert.jsp">insert</a>
 </body>
 </html>

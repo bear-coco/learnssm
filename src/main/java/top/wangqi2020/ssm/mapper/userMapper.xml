@@ -6,7 +6,7 @@
 
 <mapper namespace="top.wangqi2020.ssm.dao.UserDao">
     <insert id="insertUser" parameterType="top.wangqi2020.ssm.pojo.User">
-        insert into t_user(user_name,user_pwd,user_age) values(#{userID},#{userPwd},#{userAge})
+        insert into t_user(user_name,user_pwd,user_age) values(#{userName},#{userPwd},#{userAge})
     </insert>
 
     <select id="queryUserById" parameterType="int"  resultType="top.wangqi2020.ssm.pojo.User">

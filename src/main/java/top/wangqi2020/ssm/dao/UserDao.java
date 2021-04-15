@@ -30,6 +30,6 @@ public interface UserDao {
      * @param user 对象
      * @return 返回成功或者失败
      */
-    String insertUser(User user);
+    int insertUser(User user);
 
 }

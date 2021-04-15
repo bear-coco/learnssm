@@ -1,5 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--<jsp:useBean id="user" scope="request" type="top.wangqi2020.ssm.pojo.User"/>--%>
 <%--
   Created by IntelliJ IDEA.
   User: lenovo
@@ -12,6 +11,16 @@
 <html lang="zh-CN">
 <head>
     <title>Title</title>
+    <style>
+        table td{
+            border: 1px solid #492cde;
+        }
+        table{
+            border: 1px solid #492cde;
+            /*去掉单元格间隙*/
+            border-spacing: 0;
+        }
+    </style>
 </head>
 <body>
 <h1>欢迎${user.userName}</h1>
@@ -19,6 +28,7 @@
 <hr>
 <table>
     <caption>用户信息表</caption>
+    <caption><a href="insert.jsp">插入</a></caption>
     <tr>
         <th id="id">用户ID</th>
         <th id="name">用户名</th>
@@ -27,7 +37,6 @@
         <th id="cDate">创建时间</th>
         <th id="uDate">修改时间</th>
         <th id="c">操作</th>
-        <th id="i"><a href="insert.jsp">插入</a></th>
     </tr>
     <br>
     <c:forEach var="list" items="${list}">

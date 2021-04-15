@@ -13,9 +13,9 @@
 </head>
 <body>
 <form action="${pageContext.request.contextPath}/insertUser" method="post">
-    <label>账号：<input type="text" name="name"></label><br>
-    <label>密码：<input type="password" name="pwd"></label><br>
-    <label>年龄：<input type="number" name="age"></label><br>
+    <label>账号：<input type="text" name="userName"></label><br>
+    <label>密码：<input type="password" name="userPwd"></label><br>
+    <label>年龄：<input type="number" name="userAge"></label><br>
     <label><input type="submit" value="提交"></label><br>
 </form>
 </body>

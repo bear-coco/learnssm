@@ -52,12 +52,18 @@ public class UserController {
 
 
     @RequestMapping("insertUser")
-    public ModelAndView insertUser(){
+    public ModelAndView insertUser(String userName,String userPwd,Integer userAge){
         ModelAndView modelAndView = new ModelAndView();
         User user = new User();
+        user.setUserName(userName);
+        user.setUserPwd(userPwd);
+        user.setUserAge(userAge);
         //获取表单数据
         String msg = userService.insertUser(user);
         modelAndView.addObject("msg",msg);
+
+        List<User> list = userService.queryAllUser();
+        modelAndView.addObject("list",list);
 
         modelAndView.setViewName("user");
 

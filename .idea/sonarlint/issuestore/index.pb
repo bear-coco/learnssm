@@ -15,8 +15,6 @@ o
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 _
 /src/main/java/top/wangqi2020/ssm/pojo/User.java,5\d\5db63117ef3a1fb17e0b960f1469e73610b63e6f
-V
-&src/main/webapp/WEB-INF/jsp/insert.jsp,7\d\7dfa4b73da94aa82e9e117298ba5b85f908f7c4b
 r
 Bsrc/main/java/top/wangqi2020/ssm/controller/AccountController.java,1\e\1ece3cfc1882aecf96846f0a61fddf89a99d648c
 b
@@ -48,3 +46,5 @@ M
 src/main/resources/spring.xml,4\b\4b86d68d9207451f32ef315a3249a65b74c949a1
 O
 src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
+J
+src/main/webapp/insert.jsp,4\a\4aafdac4d1793f2fa6d11a47ab01e64973d8455e

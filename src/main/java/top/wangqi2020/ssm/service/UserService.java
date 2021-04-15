@@ -28,6 +28,11 @@ public class UserService {
     }
 
     public String insertUser(User user){
-        return userDao.insertUser(user);
+        int s = userDao.insertUser(user);
+        if (s > 0) {
+            return "添加成功";
+        }else{
+            return "添加失败";
+        }
     }
 }
