@@ -2,6 +2,8 @@ package top.wangqi2020.ssm.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import top.wangqi2020.ssm.exception.BusinessException;
+import top.wangqi2020.ssm.exception.ParamsException;
 import top.wangqi2020.ssm.pojo.Account;
 import top.wangqi2020.ssm.service.AccountService;
 
@@ -37,6 +39,11 @@ public class AccountController {
     @GetMapping("/{accountId}")
     @ResponseBody
     public Object queryAccountById(@PathVariable Integer accountId){
+//        int i = 1/0;
+        //抛出参数异常
+        if (true){
+            throw new BusinessException();
+        }
         Account account = accountService.queryAccountById(accountId);
         Map<String,Object> map = new HashMap<>(2);
         if (account == null){

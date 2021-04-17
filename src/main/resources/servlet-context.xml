@@ -59,5 +59,15 @@
         <property name="defaultErrorView" value="error"/>
         <!-- 设置异常的变量名 -->
         <property name="exceptionAttribute" value="ex"/>
+
+        <property name="exceptionMappings">
+            <props>
+                <!-- key 自定义异常对象的路径 -->
+                <prop key="top.wangqi2020.ssm.exception.ParamsException">params_error</prop>
+                <prop key="top.wangqi2020.ssm.exception.BusinessException">business_error</prop>
+            </props>
+        </property>
     </bean>
+
+
 </beans>
