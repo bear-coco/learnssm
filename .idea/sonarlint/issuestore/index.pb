@@ -68,3 +68,5 @@ M
 src/test/java/demo/index.html,2\d\2db405bce4743c96fadfd7f4bd30407483b2edca
 K
 src/test/java/demo/index.js,6\a\6adcd7ba3f4aeb8c97e00250bdefec3809ba26a3
+o
+?src/main/java/top/wangqi2020/ssm/controller/BaseController.java,4\c\4c7891da02edb105f960616748373dcae81e63f3

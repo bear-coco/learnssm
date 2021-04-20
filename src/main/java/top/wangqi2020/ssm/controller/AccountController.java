@@ -23,7 +23,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping("account")
-public class AccountController {
+public class AccountController{
 
     /**
      * 注入service层
