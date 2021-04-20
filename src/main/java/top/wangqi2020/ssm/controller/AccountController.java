@@ -39,11 +39,14 @@ public class AccountController {
     @GetMapping("/{accountId}")
     @ResponseBody
     public Object queryAccountById(@PathVariable Integer accountId){
-//        int i = 1/0;
+
+        // TODO:测试全局异常处理
         //抛出参数异常
         if (true){
-            throw new BusinessException();
+            throw new ParamsException();
         }
+
+
         Account account = accountService.queryAccountById(accountId);
         Map<String,Object> map = new HashMap<>(2);
         if (account == null){

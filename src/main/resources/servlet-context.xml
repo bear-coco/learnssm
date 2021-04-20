@@ -54,20 +54,20 @@
             全局异常简单处理
                 使用SpringMVC提供的简单异常处理器SimpleMappingExceptionResolver
     -->
-    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
-        <!-- 当异常出现时，默认处理的页面 error 呆逼视图 -->
-        <property name="defaultErrorView" value="error"/>
-        <!-- 设置异常的变量名 -->
-        <property name="exceptionAttribute" value="ex"/>
+<!--    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
+<!--        &lt;!&ndash; 当异常出现时，默认处理的页面 error 呆逼视图 &ndash;&gt;-->
+<!--        <property name="defaultErrorView" value="error"/>-->
+<!--        &lt;!&ndash; 设置异常的变量名 &ndash;&gt;-->
+<!--        <property name="exceptionAttribute" value="ex"/>-->
 
-        <property name="exceptionMappings">
-            <props>
-                <!-- key 自定义异常对象的路径 -->
-                <prop key="top.wangqi2020.ssm.exception.ParamsException">params_error</prop>
-                <prop key="top.wangqi2020.ssm.exception.BusinessException">business_error</prop>
-            </props>
-        </property>
-    </bean>
+<!--        <property name="exceptionMappings">-->
+<!--            <props>-->
+<!--                &lt;!&ndash; key 自定义异常对象的路径 &ndash;&gt;-->
+<!--                <prop key="top.wangqi2020.ssm.exception.ParamsException">params_error</prop>-->
+<!--                <prop key="top.wangqi2020.ssm.exception.BusinessException">business_error</prop>-->
+<!--            </props>-->
+<!--        </property>-->
+<!--    </bean>-->
 
 
 </beans>
